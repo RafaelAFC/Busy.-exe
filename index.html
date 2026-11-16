@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Busy.exe</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <strong class="logo">Busy.exe</strong>
+  <span id="status">● compilando…</span>
+  <span class="spacer"></span>
+  <span id="clock">00:00:00</span>
+  <button id="fs" title="Tela cheia">Tela cheia</button>
+</header>
+
+<main class="grid">
+  <section class="panel editor">
+    <h2>deploy_pipeline.js</h2>
+    <pre id="code" aria-hidden="true"></pre>
+  </section>
+
+  <section class="panel chart">
+    <h2>Requisições por segundo</h2>
+    <canvas id="line" width="480" height="180"></canvas>
+  </section>
+
+  <section class="panel res">
+    <h2>Uso de recursos</h2>
+    <div id="bars"></div>
+  </section>
+
+  <section class="panel terminal">
+    <h2>terminal — bash</h2>
+    <div id="term" aria-hidden="true"></div>
+  </section>
+
+  <section class="panel tasks">
+    <h2>Tarefas em andamento</h2>
+    <div id="tasks"></div>
+  </section>
+
+  <section class="panel logs">
+    <h2>Logs do servidor</h2>
+    <div id="logs" aria-hidden="true"></div>
+  </section>
+</main>
+
+<footer class="hint">Clique ou digite em qualquer lugar para acelerar o código. Esc alterna a tela de "relatório".</footer>
+
+<div id="boss" hidden>
+  <div class="doc">
+    <h1>Relatório trimestral — rascunho final</h1>
+    <p>1. Introdução e contexto geral dos resultados…</p>
+    <p>2. Análise comparativa dos indicadores de desempenho…</p>
+    <p class="blink">|</p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
